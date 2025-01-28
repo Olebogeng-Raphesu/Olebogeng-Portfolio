@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient( 0deg,hsl(0, 0%, 13%),hsl(229, 68%, 58%),hsl(211, 100%, 12%),hsl(211, 100%, 12%) );
+  background-size: 400% 400%;
+  animation: gradientBG 50s ease infinite;
+  color: hsl(0, 0%, 100%);
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  background-color: hsla(0, 0%, 20%, 0); 
+  color: hsl(0, 0%, 0%);
+  padding: 10px 5px;
+  text-align: left;
+}
+
+nav {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsla(0, 0%, 27%, 0.3);
+  color: hsl(0, 0%, 100%);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+}
+
+.nav-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav a {
+  color: hsl(0, 0%, 100%);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.container .section#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(110deg, hsl(0, 0%, 13%), hsla(204, 100%, 50%, 0.856),hsl(211, 100%, 12%), hsl(229, 68%, 58%));
+  color: hsl(0, 0%, 100%);
+}
+
+.section .profile-pic {
+  flex: 1;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: url(portfolio-pic.png) center/cover no-repeat;
+}
+
+.container .section#about .about-info {
+  flex: 2;
+  width: 20%;
+}
+
+.container .section#about .about-info p {
+  line-height: 1.6; /* Adjust line-height for spacing between lines */
+  max-width: 570px;
+}
+
+button{
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 70px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button#download-cv-btn{
+  background-color: hsla(0, 0%, 0%, 0);
+  box-shadow: 0px 0px 2px white;
+}
+
+footer {
+  background-color: hsla(0, 0%, 20%, 0.0); 
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .container .section#about {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px; 
+}
+
+
+.container .section#about .about-info {
+    text-align: center; 
+    width: 100%;
+}
+
+
+nav {
+  position: fixed;
+  top: 10%;
+  left: 90%;
+}
+
+.nav-links {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+  left: -150%;
+  background-color: hsla(0, 0%, 27%, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: end;
+}
+
+.nav-icon {
+  display: block;
+}
+
+.nav-links a {
+  margin: 10px 0;
+}
+}
