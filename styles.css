@@ -45,6 +45,10 @@ nav {
   display: flex;
 }
 
+.nav-links.active {
+  display: flex;
+}
+
 nav a {
   color: hsl(0, 0%, 100%);
   margin: 0 15px;
@@ -95,7 +99,7 @@ nav a:hover {
 }
 
 .container .section#about .about-info p {
-  line-height: 1.6; /* Adjust line-height for spacing between lines */
+  line-height: 1.6; 
   max-width: 570px;
 }
 
@@ -120,6 +124,8 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
+
+
 
 @media (max-width: 768px) {
   .container .section#about {
